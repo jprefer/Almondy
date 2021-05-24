@@ -1067,9 +1067,13 @@ b, strong {
     max-height: 720px !important;
 }
 
+.banner-max-height img {
+    max-height: 720px;
+}
 
-
-
+.banner_video_bg .carousel-inner .item {
+    height: 100vh;
+}
 
 .banner-content {
     align-self: center !important;
