@@ -70,7 +70,7 @@
 <!-- /Option Panel -->
 
 <!-- Top header start -->
-<header class="top-header hidden-xs" id="top">
+<header class="top-header top-header-2 hidden-xs" id="top">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8">
@@ -95,7 +95,7 @@
 <!-- Top header end -->
 
 <!-- Main header start -->
-<header class="main-header main-header-4">
+<header class="main-header main-header-2 main-header-3">
     <div class="container">
         <nav class="navbar navbar-default">
             <div class="navbar-header">
@@ -106,12 +106,12 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.html" class="logo">
-                    <img src="img/logos/logo.png" alt="logo">
+                    <img src="img/logos/white-logo.png" alt="logo">
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-collapse collapse" role="navigation" aria-expanded="true" id="app-navigation">
-                <ul class="nav navbar-nav ml-auto">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown active">
                         <a data-toggle="dropdown" data-submenu="">
                             Home<span class="caret"></span>
@@ -206,7 +206,11 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- /.navbar-collapse -->
+            <!-- /.container -->
         </nav>
+
         <div class="header-search animated fadeInDown">
             <form class="form-inline">
                 <input type="text" class="form-control" id="searchKey" placeholder="Search...">
@@ -220,19 +224,69 @@
 <!-- Main header end -->
 
 <!-- Banner start -->
-<div class="banner">
+<div class="banner banner-style-3">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="h-100 w-100" src="img/1920_1080_AlmondyFront.jpg" alt="banner-slider-3">
+                <img class="h-100 w-100" src="http://placehold.it/1920x1080" alt="banner-slider-3">
                 <div class="carousel-caption banner-slider-inner banner-top-align">
-                    <div class="banner-content container text-center">
-                        <div class="max-area2">
-                            <h1 data-animation="animated fadeInDown delay-05s">Welcome to The Almondy Inn</h1>
-                            <p data-animation="animated fadeInUp delay-1s">Bed & Breakfast</p>
-                            <a href="#" class="btn btn-md btn-theme" data-animation="animated fadeInUp delay-15s">Get Started Now</a>
-                            <a href="#" class="btn btn-md border-btn-theme" data-animation="animated fadeInUp delay-15s">Learn More</a>
+                    <div class="banner-content banner-content-left container">
+                        <div class="row banner-mt">
+                            <div class="col-md-7">
+                                <div class="banner-test-info wow fadeInLeft delay-04s">
+                                    <h1>Welcome To Hotel Alpha</h1>
+                                    <p>Lorem ipsum dolor sit amet, conconsectetuer adipiscing elit Lorem ipsum dolor sit amet, conconsectetuer</p>
+                                    <a href="#" class="btn btn-md btn-theme">Get Started Now</a>
+                                    <a href="#" class="btn btn-md border-btn-theme">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-5 wow fadeInRight delay-04s">
+                                <div class="search-area-box-3">
+                                    <div class="search-contents">
+                                        <form method="GET">
+                                            <h2>Search Your <span>Rooms</span></h2>
+                                            <div class="form-group">
+                                                <input type="text" class="btn-default datepicker" placeholder="Check In">
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <input type="text" class="btn-default datepicker" placeholder="Check Out">
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <select class="selectpicker search-fields form-control-2" name="room">
+                                                    <option>Room</option>
+                                                    <option>Single Room</option>
+                                                    <option>Double Room</option>
+                                                    <option>Deluxe Room</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="selectpicker search-fields form-control-2" name="adults">
+                                                    <option>Adult</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="selectpicker search-fields form-control-2" name="children">
+                                                    <option>Child</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="search-button btn-theme">Search</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -243,7 +297,7 @@
 <!-- Banner end -->
 
 <!-- Search area box 2 start -->
-<div class="search-area-box-2 search-area-box-6 search-area-box-7">
+<div class="search-area-box-2 search-area-box-6 hidden-lg hidden-md">
     <div class="container">
         <div class="search-contents">
             <form method="GET">
@@ -257,17 +311,17 @@
                     </div>
                     <div class="col-lg-9 col-md-9">
                         <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <input type="text" class="btn-default datepicker" placeholder="Check In">
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <input type="text" class="btn-default datepicker" placeholder="Check Out">
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <select class="selectpicker search-fields form-control-2" name="room">
                                         <option>Room</option>
@@ -277,7 +331,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <select class="selectpicker search-fields form-control-2" name="adults">
                                         <option>Adult</option>
@@ -289,7 +343,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
                                     <select class="selectpicker search-fields form-control-2" name="children">
                                         <option>Child</option>
@@ -301,9 +355,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="form-group">
-                                    <button class="search-button btn-theme btn-theme2">Search</button>
+                                    <button class="search-button btn-theme">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -315,8 +369,8 @@
 </div>
 <!-- Search area box 2 end -->
 
-<!-- Hotel section section start -->
-<div class="content-area hotel-section">
+<!-- Hotel secion start -->
+<div class="content-area hotel-section clearfix">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
@@ -325,345 +379,111 @@
         </div>
         <ul class="list-inline-listing filters filters-listing-navigation wow fadeInUp delay-04s">
             <li class="active btn filtr-button filtr" data-filter="all">All</li>
-            <li data-filter="1" class="btn btn-inline filtr-button filtr">Classic</li>
-            <li data-filter="2" class="btn btn-inline filtr-button filtr">Deluxe</li>
-            <li data-filter="3" class="btn btn-inline filtr-button filtr">Royal</li>
-            <li data-filter="4" class="btn btn-inline filtr-button filtr">Luxury</li>
+            <li data-filter="1" class="btn btn-inline filtr-button filtr">Single</li>
+            <li data-filter="2" class="btn btn-inline filtr-button filtr">Double</li>
+            <li data-filter="3" class="btn btn-inline filtr-button filtr">Deluxe</li>
+            <li data-filter="4" class="btn btn-inline filtr-button filtr">Royal</li>
         </ul>
         <div class="row wow fadeInUp delay-04s">
             <div class="filtr-container">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="3, 2, 4">
-                    <div class="hotel-box">
-                        <!--header -->
-                        <div class="header clearfix">
-                            <img src="http://placehold.it/360x240" alt="img-1" class="img-responsive">
-                            <div class="pr">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-full"></i>
-                                </div>
-                                $567.99/Night
-                            </div>
+                    <div class="hotel-box-3">
+                        <div class="hotel-theme">
+                            <a href="rooms-details.html">
+                                <img src="http://placehold.it/360x240" alt="img-2" class="img-responsive">
+                            </a>
                         </div>
-                        <!-- Detail -->
-                        <div class="detail clearfix">
-                            <h3>
-                                <a href="rooms-details.html">Luxury Room</a>
-                            </h3>
-                            <p class="location">
-                                <a href="rooms-details.html">
-                                    <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </p>
-                            <div class="fecilities">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-bed"></i> Beds
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-air-conditioning"></i>
-                                        AC
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-graph-line-screen"></i>
-                                        TV
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-weightlifting"></i>
-                                        GYM
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
-                                        Wi-fi
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-parking"></i>
-                                        Parking
-                                    </li>
-                                </ul>
+                        <div class="text">
+                            <div class="clearfix">
+                                <div class="pull-left"><a href="rooms-details.html">Family Room</a></div>
+                                <div class="price">
+                                    $320.00
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="3, 4, 1">
-                    <div class="hotel-box">
-                        <!--header -->
-                        <div class="header clearfix">
-                            <img src="http://placehold.it/360x240" alt="img-2" class="img-responsive">
-                            <div class="pr">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-full"></i>
-                                </div>
-                                $567.99/Night
-                            </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 3, 4">
+                    <div class="hotel-box-3">
+                        <div class="hotel-theme">
+                            <a href="rooms-details.html">
+                                <img src="http://placehold.it/360x240" alt="img-6" class="img-responsive">
+                            </a>
                         </div>
-                        <!-- Detail -->
-                        <div class="detail clearfix">
-                            <h3>
-                                <a href="rooms-details.html">Double Room</a>
-                            </h3>
-                            <p class="location">
-                                <a href="rooms-details.html">
-                                    <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </p>
-                            <div class="fecilities">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-bed"></i> Beds
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-air-conditioning"></i>
-                                        AC
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-graph-line-screen"></i>
-                                        TV
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-weightlifting"></i>
-                                        GYM
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
-                                        Wi-fi
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-parking"></i>
-                                        Parking
-                                    </li>
-                                </ul>
+                        <div class="text">
+                            <div class="clearfix">
+                                <div class="pull-left"><a href="rooms-details.html">Double Room</a></div>
+                                <div class="price">
+                                    $320.00
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 4, 2">
-                    <div class="hotel-box">
-                        <!--header -->
-                        <div class="header clearfix">
-                            <img src="http://placehold.it/360x240" alt="img-4" class="img-responsive">
-                            <div class="pr">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-full"></i>
-                                </div>
-                                $567.99/Night
-                            </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="2, 4, 1">
+                    <div class="hotel-box-3">
+                        <div class="hotel-theme">
+                            <a href="rooms-details.html">
+                                <img src="http://placehold.it/360x240" alt="img-2" class="img-responsive">
+                            </a>
                         </div>
-                        <!-- Detail -->
-                        <div class="detail clearfix">
-                            <h3>
-                                <a href="rooms-details.html">Single Room</a>
-                            </h3>
-                            <p class="location">
-                                <a href="rooms-details.html">
-                                    <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </p>
-                            <div class="fecilities">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-bed"></i> Beds
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-air-conditioning"></i>
-                                        AC
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-graph-line-screen"></i>
-                                        TV
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-weightlifting"></i>
-                                        GYM
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
-                                        Wi-fi
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-parking"></i>
-                                        Parking
-                                    </li>
-                                </ul>
+                        <div class="text">
+                            <div class="clearfix">
+                                <div class="pull-left"><a href="rooms-details.html">Single Room</a></div>
+                                <div class="price">
+                                    $320.00
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="2, 3, 1">
-                    <div class="hotel-box">
-                        <!--header -->
-                        <div class="header clearfix">
-                            <img src="http://placehold.it/360x240" alt="img-4" class="img-responsive">
-                            <div class="pr">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-full"></i>
-                                </div>
-                                $567.99/Night
-                            </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="4, 3, 1">
+                    <div class="hotel-box-3">
+                        <div class="hotel-theme">
+                            <a href="rooms-details.html">
+                                <img src="http://placehold.it/360x240" alt="img-3" class="img-responsive">
+                            </a>
                         </div>
-                        <!-- Detail -->
-                        <div class="detail clearfix">
-                            <h3>
-                                <a href="rooms-details.html">Single Room</a>
-                            </h3>
-                            <p class="location">
-                                <a href="rooms-details.html">
-                                    <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </p>
-                            <div class="fecilities">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-bed"></i> Beds
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-air-conditioning"></i>
-                                        AC
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-graph-line-screen"></i>
-                                        TV
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-weightlifting"></i>
-                                        GYM
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
-                                        Wi-fi
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-parking"></i>
-                                        Parking
-                                    </li>
-                                </ul>
+                        <div class="text">
+                            <div class="clearfix">
+                                <div class="pull-left"><a href="rooms-details.html">Standard</a></div>
+                                <div class="price">
+                                    $320.00
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
-                    <div class="hotel-box">
-                        <!--header -->
-                        <div class="header clearfix">
-                            <img src="http://placehold.it/360x240" alt="img-4" class="img-responsive">
-                            <div class="pr">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-full"></i>
-                                </div>
-                                $567.99/Night
-                            </div>
+                    <div class="hotel-box-3">
+                        <div class="hotel-theme">
+                            <a href="rooms-details.html">
+                                <img src="http://placehold.it/360x240" alt="img-5" class="img-responsive">
+                            </a>
                         </div>
-                        <!-- Detail -->
-                        <div class="detail clearfix">
-                            <h3>
-                                <a href="rooms-details.html">Single Room</a>
-                            </h3>
-                            <p class="location">
-                                <a href="rooms-details.html">
-                                    <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </p>
-                            <div class="fecilities">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-bed"></i> Beds
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-air-conditioning"></i>
-                                        AC
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-graph-line-screen"></i>
-                                        TV
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-weightlifting"></i>
-                                        GYM
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
-                                        Wi-fi
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-parking"></i>
-                                        Parking
-                                    </li>
-                                </ul>
+                        <div class="text">
+                            <div class="clearfix">
+                                <div class="pull-left"><a href="rooms-details.html">Couple Room</a></div>
+                                <div class="price">
+                                    $320.00
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="4, 2, 1">
-                    <div class="hotel-box">
-                        <!--header -->
-                        <div class="header clearfix">
-                            <img src="http://placehold.it/360x240" alt="img-2" class="img-responsive">
-                            <div class="pr">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-full"></i>
-                                </div>
-                                $567.99/Night
-                            </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="4, 3, 1">
+                    <div class="hotel-box-3">
+                        <div class="hotel-theme">
+                            <a href="rooms-details.html">
+                                <img src="http://placehold.it/360x240" alt="img-8" class="img-responsive">
+                            </a>
                         </div>
-                        <!-- Detail -->
-                        <div class="detail clearfix">
-                            <h3>
-                                <a href="rooms-details.html">Double Room</a>
-                            </h3>
-                            <p class="location">
-                                <a href="rooms-details.html">
-                                    <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </p>
-                            <div class="fecilities">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-bed"></i> Beds
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-air-conditioning"></i>
-                                        AC
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-graph-line-screen"></i>
-                                        TV
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-weightlifting"></i>
-                                        GYM
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
-                                        Wi-fi
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-parking"></i>
-                                        Parking
-                                    </li>
-                                </ul>
+                        <div class="text">
+                            <div class="clearfix">
+                                <div class="pull-left"><a href="rooms-details.html">Family Room</a></div>
+                                <div class="price">
+                                    $320.00
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -672,104 +492,114 @@
         </div>
     </div>
 </div>
-<!-- Hotel section end -->
+<!-- Gallery secion end -->
+<div class="clearfix"></div>
 
 <!-- Our facilties section 2 start -->
 <div class="our-facilties-section-2">
     <div class="container">
-        <div class="main-title">
-            <h1>Our Facilties</h1>
-            <p>Check out our hotel facilties</p>
-        </div>
-        <div class="row wow fadeInUp delay-04s">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="services-box">
-                    <div class="number">1</div>
-                    <div class="icon">
-                        <i class="flaticon-school-call-phone-reception"></i>
-                    </div>
-                    <div class="detail">
-                        <h3>
-                            <a href="#">24-hour Reception</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                    </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 wow fadeInLeft delay-04s">
+                <div class="service-text">
+                    <h1>Our Facilties</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text everLorem</p>
+                    <p>industry's standard dummy text everLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                    <br>
+                    <a href="blog-details.html" class="btn btn-outline2 btn-md">View Details</a>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="services-box">
-                    <div class="number">2</div>
-                    <div class="icon">
-                        <i class="flaticon-school-call-phone-reception"></i>
+            <div class="col-lg-8 col-md-8 wow fadeInRight delay-04s">
+                <div class="row mls">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="services-box">
+                            <div class="number">1</div>
+                            <div class="icon">
+                                <i class="flaticon-school-call-phone-reception"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="#">24-hour Reception</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="detail">
-                        <h3>
-                            <a href="#">Room Service</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="services-box">
+                            <div class="number">2</div>
+                            <div class="icon">
+                                <i class="flaticon-school-call-phone-reception"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="#">Room Service</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="services-box">
-                    <div class="number">3</div>
-                    <div class="icon">
-                        <i class="flaticon-graph-line-screen"></i>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="services-box">
+                            <div class="number">3</div>
+                            <div class="icon">
+                                <i class="flaticon-graph-line-screen"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="#">Flat Screen TV</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="detail">
-                        <h3>
-                            <a href="#">Flat Screen TV</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="services-box">
+                            <div class="number">4</div>
+                            <div class="icon">
+                                <i class="flaticon-weightlifting"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="#">Gym</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="services-box">
-                    <div class="number">4</div>
-                    <div class="icon">
-                        <i class="flaticon-weightlifting"></i>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="services-box">
+                            <div class="number">5</div>
+                            <div class="icon">
+                                <i class="flaticon-parking"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="#">Free Parking</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="detail">
-                        <h3>
-                            <a href="#">Gym</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="services-box">
-                    <div class="number">5</div>
-                    <div class="icon">
-                        <i class="flaticon-parking"></i>
-                    </div>
-                    <div class="detail">
-                        <h3>
-                            <a href="#">Free Parking</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="services-box">
-                    <div class="number">6</div>
-                    <div class="icon">
-                        <i class="flaticon-wifi-connection-signal-symbol"></i>
-                    </div>
-                    <div class="detail">
-                        <h3>
-                            <a href="#">Free Wi-Fi</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="services-box">
+                            <div class="number">6</div>
+                            <div class="icon">
+                                <i class="flaticon-wifi-connection-signal-symbol"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="#">Free Wi-Fi</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Our facilties section 2 end -->
+<!-- Services 2 end -->
 
 <!-- Events section start -->
 <div class="events-secion content-area">
@@ -1147,7 +977,7 @@
 <!-- Testimonial-2 end -->
 
 <!-- Blog section start -->
-<div class="blog-section content-area">
+<div class="blog-section content-area bg-grey">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
