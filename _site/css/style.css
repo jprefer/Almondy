@@ -3996,7 +3996,7 @@ blockquote {
 
 /** SUB BANNER AREA START **/
 .sub-banner {
-    background: rgba(0, 0, 0, 0.04) url(http://placehold.it/1920x300) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(img/1920_300_bg.jpg) top left repeat;
     background-size: cover;
     height: 300px;
     background-position: center center;
