@@ -79,7 +79,33 @@
 
         });
     </script> 
+<!-- Begin For WebREzPro Booking Engine Standard Form-->
+<!--<script type="text/javascript" src="https://widgets.webrez.com/Javascript/embed_bookingrequest.version26.js?hotel_id=2029&format=portrait&max_adults=6&max_beds=2&date_format=mm-dd-yy&version=2"></script>-->
+<!-- End For WebREzPro Booking Engine-->
+<!--- Custom DatePicker For Web Rez Pro -->
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://widgets.webrez.com/Widget/jquery-1.9.1.min.js"></script>
+<script src="https://widgets.webrez.com/Widget/jquery-ui.js"></script>
+<script src="https://widgets.webrez.com/Widget/wrp_calendar_14.js"></script>
+<link href="https://widgets.webrez.com/Widget/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css">
 
+<script>
+
+urlParams = new URLSearchParams(window.location.search);
+myParam = urlParams.get('hotel_id');
+
+setup_parameters =
+	{
+	"hotel_id": myParam || "2029",				// required - your WebRezPro hotel id must be entered
+	"date_format":"D M dd, yy", 	// optional - default is 'DD M dd, yy'
+	"default_days_in_advance":"0",	// optional - default is 0 days in advance,
+	"flag_turnoff_autoload_date":"0" // 0 = arrival and departure dates automatically loaded, 1 = not loaded, default is 0
+	};
+</script>
+
+
+<!-- End ustom Date Picker For Web REz Pro -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -253,7 +279,7 @@
                                 <h1 data-animation="animated fadeInDown delay-05s">Welcome To The Almondy Inn</h1>
                                 <p data-animation="animated fadeInUp delay-1s">Our Newport Rhode Island Bed and Breakfast is conveniently located in downtown Newport RI, just steps from Bannister’s and Bowens Wharfs on Narragansett Bay.</p>
                                 <a href="#" class="btn btn-md btn-theme" data-animation="animated fadeInUp delay-15s">Book Now</a>
-                                <a href="#" class="btn btn-md border-btn-theme" data-animation="animated fadeInUp delay-15s">Learn More</a>
+                               
                             </div>
                         </div>
                     </div>
@@ -266,7 +292,7 @@
                                 <h1 data-animation="animated fadeInDown delay-05s">Stay At The Almondy Inn</h1>
                                 <p data-animation="animated fadeInUp delay-05s">This elegant 1890’s Victorian has been restored to its original glory and is located within walking distance of Newport’s many fine restaurants, antique shops, art galleries, boutiques, and near the various famous Newport Mansions and island beaches.</p>
                                 <a href="#" class="btn btn-md btn-theme" data-animation="animated fadeInUp delay-15s">Book Now</a>
-                                <a href="#" class="btn btn-md border-btn-theme" data-animation="animated fadeInUp delay-15s">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -279,7 +305,7 @@
                                 <h1 data-animation="animated fadeInDown delay-05s">First Class Accommodations</h1>
                                 <p data-animation="animated fadeInUp delay-1s">The Almondy Inn features six elegant guestrooms and suites that are uniquely decorated with fine period antiques, private En-suite bathrooms – most have a Jacuzzi bath, a bedside gas fireplace and some have bay views. Spacious suites at our Newport Rhode Island Inn offer a separate living or dressing room for additional comfort and a true feeling of spacious luxury.</p>
                                 <a href="#" class="btn btn-md btn-theme" data-animation="animated fadeInUp delay-15s">Book Now</a>
-                                <a href="#" class="btn btn-md border-btn-theme" data-animation="animated fadeInUp delay-20s">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -304,64 +330,63 @@
 </div>
 <!-- Banner end -->
 
-<!-- Search area box 2 start -->
+
+
+<!-- Search area box 2 start - Bad Retore 08/25/21 -->
 <div class="search-area-box-2 search-area-box-6">
     <div class="container">
         <div class="search-contents">
-            <form method="GET">
+            <form id="widget_link" action="">
+			<input type="hidden" name="table" value="">
+			<input type="hidden" name="hotel_id" value="">
+			<input type="hidden" name="listing_id" value="">
+			<input type="hidden" name="mode" value="">
+			<input type="hidden" name="command" value="">
+			<input type="hidden" name="nextcommand" value="">
                 <div class="row search-your-details">
                     <div class="col-lg-3 col-md-3">
                         <div class="search-your-rooms mt-20">
                             <h3 class="hidden-xs hidden-sm">Search</h3>
-                            <h2 class="hidden-xs hidden-sm">Your <span>Rooms</span></h2>
-                            <h2 class="hidden-lg hidden-md">Search Your <span>Rooms</span></h2>
+                            <h2 class="hidden-xs hidden-sm">For Your <span>Room</span></h2>
+                            <h2 class="hidden-lg hidden-md">Search For Your <span>Room</span></h2>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-9">
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            Check In Date
                                 <div class="form-group">
-                                    <input type="text" class="btn-default datepicker" placeholder="Check In">
+                                    <input name="Arrival Date"  id="formatted_date_from" size="20"  type="text" placeholder="Check In" >
+									<input type="hidden" name="date_from" id="date_from" value="Check In">
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            Check Out Date
                                 <div class="form-group">
-                                    <input type="text" class="btn-default datepicker" placeholder="Check Out">
+                                    <input name="formatted_date_to" id="formatted_date_to" size="20" value="Depature date">
+									<input type="hidden" name="date_to" id="date_to" value="">
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
-                                <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="room">
-                                        <option>Room</option>
-                                        <option>Single Room</option>
-                                        <option>Double Room</option>
-                                        <option>Deluxe Room</option>
-                                    </select>
-                                </div>
+                                
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
+                            # of Adults (13 or over Only)
                                 <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="adults">
-                                        <option>Adult</option>
+                                    <select name="num_adults" class="selectpicker search-fields form-control-2" id="num_adults" >
+                                      
                                         <option>1</option>
-                                        <option>2</option>
+                                        <option>2 </option>
                                         <option>3</option>
                                         <option>4</option>
                                         <option>5</option>
+                                        <option>6</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
-                                <div class="form-group">
-                                    <select class="selectpicker search-fields form-control-2" name="children">
-                                        <option>Child</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
-                                </div>
+                           Promo Code: 
+                             <input type="text" name="access_code" id="access_code" size="10">  
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-6 col-pad-3">
                                 <div class="form-group">
@@ -376,6 +401,11 @@
     </div>
 </div>
 <!-- Search area box 2 end -->
+
+<body>
+
+
+
 
 <!-- Hotel alpha start -->
 <div class="hotel-alpha content-area-6">
