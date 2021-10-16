@@ -40,6 +40,45 @@
     <script  src="js/html5shiv.min.js"></script>
     <script  src="js/respond.min.js"></script>
     <![endif]-->
+    <!-- For Form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#submit").click(function(e) {
+                e.preventDefault();
+
+                var name = $("#name").val(),
+                    email = $("#email").val(),
+                    phone = $("#phone").val(),
+                    wsource = $("#wsource").val(),
+                    desc = $("#desc").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: 'https://6632bs8ve0.execute-api.us-east-1.amazonaws.com/TestAPI/contact-us',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        'name': name,
+                        'phone':phone,
+                        'email': email,
+                        'desc': desc,
+                        'wsource': "www.AlmondyInn.com - Rooms_EmailCapture"
+                    }),
+                    success: function(res){
+                        $('#form-response').text('Thank You Message Sent.');
+                        
+					
+                    },
+                    error: function(){
+                        $('#form-response').text('Error.');
+                    }
+                });
+
+            })
+
+        });
+    </script> 
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -75,18 +114,16 @@
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8">
                 <div class="list-inline">
-                    <a href="tel:+55-4XX-634-7071"><i class="fa fa-phone"></i>Need Support? +55-4XX-634-7071</a>
-                    <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@themevessel.com</a>
+                    <a href="tel:+1-401-848-7202"><i class="fa fa-phone"></i>Call Us +1-401-848-7202</a>
+                    <a href="mailto:info@AlmondyInn.com"><i class="fa fa-envelope"></i>info@AlmondyInn.com</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <ul class="top-social-media pull-right">
                     <li>
-                        <a href="login.html" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
+                        <a href="https://secure.webrez.com/hotel/2029?rc_id=14909" class="sign-in"><i class="fa fa-calendar"></i> Book Now</a>
                     </li>
-                    <li>
-                        <a href="signup.html" class="sign-in"><i class="fa fa-user"></i> Register</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -112,98 +149,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-collapse collapse" role="navigation" aria-expanded="true" id="app-navigation">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" data-submenu="">
-                            Home<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html">Home 1</a></li>
-                            <li><a href="index-2.html">Home 2</a></li>
-                            <li><a href="index-3.html">Home 3</a></li>
-                            <li><a href="index-4.html">Home 4</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown active">
-                        <a data-toggle="dropdown" data-submenu="">
-                            Rooms<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="rooms-col-1.html">1 Column</a></li>
-                            <li><a href="rooms-col-2.html">2 Column</a></li>
-                            <li><a href="rooms-col-3.html">3 Column</a></li>
-                            <li><a href="rooms-details.html">Rooms Details</a></li>
-                            <li><a href="rooms-details-2.html">Rooms Details 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" data-submenu="">
-                            Pages<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a >Gallery</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="gallery-3column.html">Gallery 3 Column</a></li>
-                                    <li><a href="gallery-4column.html">Gallery 4 Column</a></li>
-                                    <li><a href="gallery-masonry.html">Gallery Masonry</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a >About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about-2.html">About Us 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="booking-system.html">Booking System</a></li>
-                            <li class="dropdown-submenu">
-                                <a >Staff</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="staff.html">Staff</a></li>
-                                    <li><a href="staff-2.html">Staff 2</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a >Events</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="events.html">Events</a></li>
-                                    <li><a href="events-right-sidebar.html">Events Right Sidebar</a></li>
-                                    <li><a href="events-details.html">Events Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="signup.html">Signup</a></li>
-                            <li><a href="forgot-password.html">Forgot Password</a></li>
-                            <li><a href="404.html">404 Error</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" data-submenu="">
-                            Contact<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="contact-2.html">Contact 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a  data-toggle="dropdown" data-submenu="">
-                            Blog<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                            <li><a href="blog-full-width.html">Blog Fullwidth</a></li>
-                            <li><a href="blog-creative.html">Blog Creative</a></li>
-                            <li><a href="blog-details.html">Blog Detail</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a id="header-search-btn" class="btn-navbar search-icon"><i class="fa fa-search"></i></a>
-                    </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://cloud.threshold360.com/locations/7837788?cta_label=&cta_url=&analyticsSource=websiteTopBar" target=”_blank” >Virtual Tour</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                    
+                   <li>  <a href="https://secure.webrez.com/hotel/2029?rc_id=14909" class="sign-in"><i class="fa fa-calendar"></i> Book</a></li>
+                    <li><a href="index.html#specialevents">Special Events</a></li>
+                     <li><a href="gallery.html">Gallery</a></li>
+                     <li><a href="innpolicies.html">Inn Policies</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                     <li><a href="about.html">About Us</a></li>
+                   
                 </ul>
             </div>
         </nav>
@@ -218,6 +174,7 @@
     </div>
 </header>
 <!-- Main header end -->
+
 
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
@@ -751,20 +708,21 @@
                         <ul class="personal-info">
                             <li>
                                 <i class="fa fa-map-marker"></i>
-                                Address: 44 New Design Street,
+                                <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=almondyinn">Address: 25 Pelham Street, Newport, RI 02840
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i>
-                                Email:<a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                                Email: <a href="mailto:info@AlmondyInn.com">info@AlmondyInn.com</a>
                             </li>
                             <li>
                                 <i class="fa fa-phone"></i>
-                                Phone: <a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+                                Phone: <a href="tel:+14018487202">+1 (401) 848-7202</a>
                             </li>
                             <li>
-                                <i class="fa fa-fax"></i>
-                                Fax: +0477 85X6 552
+                                <i class="fa fa-phone"></i>
+                                US TollFree: <a href="tel:+18004786155">+1 (800) 478-6155</a>
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -775,19 +733,19 @@
                         </div>
                         <ul class="links">
                             <li>
-                                <a href="rooms-col-3.html">Rooms & Suites</a>
+                                <a href="rooms.html">Rooms & Suites</a>
                             </li>
                             <li>
-                                <a href="rooms-details.html">Restaurant</a>
+                                <a href="https://cloud.threshold360.com/locations/7837788?cta_label=&cta_url=&analyticsSource=websiteBottomBar">Virtual Tour</a>
                             </li>
                             <li>
-                                <a href="rooms-col-2.html">Hotel</a>
+                                <a href="index.html#packages">Packages</a>
                             </li>
                             <li>
-                                <a href="#">Our Facilties</a>
+                                <a href="index.html#facilities">Our Facilities</a>
                             </li>
                             <li>
-                                <a href="rooms-col-3.html">Rooms</a>
+                                <a href="https://secure.webrez.com/hotel/2029?rc_id=14909">Booking</a>
                             </li>
                         </ul>
                     </div>
@@ -802,13 +760,13 @@
                                 <a href="about.html">About Us</a>
                             </li>
                             <li>
-                                <a href="blog-right-sidebar.html">Blog & Events</a>
+                                <a href="index.html#innkeepers">Our Innkeepers</a>
                             </li>
                             <li>
-                                <a href="booking-system.html">Booking</a>
+                                 <a href="https://secure.webrez.com/hotel/2029?rc_id=14909">Booking</a>
                             </li>
                             <li>
-                                <a href="gallery-3column.html">Gallery</a>
+                                <a href="gallery.html">Gallery</a>
                             </li>
                             <li>
                                 <a href="contact.html">Contact Us</a>
@@ -819,15 +777,20 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="footer-item newsletter">
                         <div class="main-title-2">
-                            <h1>Newsletter</h1>
+                            <h1>Specials</h1>
                         </div>
                         <div class="newsletter-inner">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Put your email adress below to periodically receive our special discounts and events calendar. No worries - We will never sell your address or spam you.</p>
                             <form class="form-inline" action="#" method="GET">
-                                <input type="text" class="form-control" id="inlineFormInputName4" placeholder="Your Email">
-                                <button type="submit" class="btn btn-small"><i class="fa fa-paper-plane"></i></button>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                <button  id="submit" type="submit" class="btn btn-small"><i class="fa fa-paper-plane"></i></button>
                             </form>
+                            <div id="form-response"></div>
+					  
+					<br/>
+					</div>  
                         </div>
+                         
                     </div>
                 </div>
             </div>
@@ -841,16 +804,16 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <p> &copy;  2021 <a href="http://themevessel.com/" target="_blank">Theme Vessel</a>. All Rights Reserved.</p>
+               <p> &copy;  2021 Almondy Inn. All Rights Reserved.</p>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="clearfix"></div>
                 <ul class="social-list">
-                    <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                    <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a target="_blank" href="https://twitter.com/AlmondyInn" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/almondyinn" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/almondyinn/" class="rss-bg"><i class="fa fa-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.tripadvisor.com/Hotel_Review-g60978-d552585-Reviews-Almondy_Inn-Newport_Rhode_Island.html" class="google-bg"><i class="fa fa-tripadvisor"></i></a></li>
+                    <li><a target="_blank" href="https://business.google.com/site/l/06284479766969193963?hl=en" class="linkedin-bg"><i class="fa fa-google"></i></a></li>
                 </ul>
             </div>
         </div>

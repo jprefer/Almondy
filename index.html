@@ -181,59 +181,13 @@ setup_parameters =
                 <li><a href="https://cloud.threshold360.com/locations/7837788?cta_label=&cta_url=&analyticsSource=websiteTopBar" target=”_blank” >Virtual Tour</a></li>
                 <li><a href="rooms.html">Rooms</a></li>
                     
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" data-submenu="">
-                            Pages<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a >Gallery</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="gallery-3column.html">Gallery 3 Column</a></li>
-                                    <li><a href="gallery-4column.html">Gallery 4 Column</a></li>
-                                    <li><a href="gallery-masonry.html">Gallery Masonry</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a >About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about-2.html">About Us 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="booking-system.html">Booking System</a></li>
-                            <li class="dropdown-submenu">
-                                <a >Staff</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="staff.html">Staff</a></li>
-                                    <li><a href="staff-2.html">Staff 2</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a >Events</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="events.html">Events</a></li>
-                                    <li><a href="events-right-sidebar.html">Events Right Sidebar</a></li>
-                                    <li><a href="events-details.html">Events Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="innpolicies.html">Inn Policies</a></li>
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="signup.html">Signup</a></li>
-                            <li><a href="forgot-password.html">Forgot Password</a></li>
-                            <li><a href="404.html">404 Error</a></li>
-                        </ul>
-                    </li>
+                   <li>  <a href="https://secure.webrez.com/hotel/2029?rc_id=14909" class="sign-in"><i class="fa fa-calendar"></i> Book</a></li>
                     <li><a href="#specialevents">Special Events</a></li>
                      <li><a href="gallery.html">Gallery</a></li>
                      <li><a href="innpolicies.html">Inn Policies</a></li>
                       <li><a href="contact.html">Contact</a></li>
                      <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown">
-                        <a id="header-search-btn" class="btn-navbar search-icon"><i class="fa fa-search"></i></a>
-                    </li>
+                   
                 </ul>
             </div>
         </nav>
@@ -1567,7 +1521,13 @@ setup_parameters =
 </div>
  </div>
 <!-- Partners block end -->
-
+<!-- Google map start -->
+<div class="section">
+    <div class="map">
+        <div id="map" class="contact-map"></div>
+    </div>
+</div>
+<!-- Google map end -->
 <!-- Footer start -->
 <footer class="main-footer clearfix">
     <div class="container">
@@ -1641,7 +1601,7 @@ setup_parameters =
                                  <a href="https://secure.webrez.com/hotel/2029?rc_id=14909">Booking</a>
                             </li>
                             <li>
-                                <a href="gallery-3column.html">Gallery</a>
+                                <a href="gallery.html">Gallery</a>
                             </li>
                             <li>
                                 <a href="contact.html">Contact Us</a>
@@ -1712,6 +1672,68 @@ setup_parameters =
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script  src="js/ie10-viewport-bug-workaround.js"></script>
 <!-- Custom javascript -->
+<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwNuPVjwA4qves-CRjnxj3PwPvX--czw"></script>
+<script>
+    function LoadMap(propertes) {
+        var defaultLat = 41.48646256098724;
+        var defaultLng = -71.31419672256933;
+        var mapOptions = {
+            center: new google.maps.LatLng(defaultLat, defaultLng),
+            zoom: 15,
+            scrollwheel: false,
+            styles: [
+                {
+                    featureType: "administrative",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: "water",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: 'poi.business',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'labels.icon',
+                    stylers: [{visibility: 'off'}]
+                },
+            ]
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var infoWindow = new google.maps.InfoWindow();
+        var myLatlng = new google.maps.LatLng(41.48646256098724, -71.31419672256933);
 
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map
+        });
+        (function (marker) {
+            google.maps.event.addListener(marker, "click", function (e) {
+                infoWindow.setContent("" +
+                        "<div class='map-edu contact-map-content'>" +
+                        "<div class='map-content'>" +
+                        "<p class='address'>ALMONDY INN, 25 Pelham Street, Newport, RI 02840 </p>" +
+                        "<ul class='map-edu-list'> " +
+                        "<li><i class='fa fa-phone'></i>  +1 401 848 7202</li> " +
+                        "<li><i class='fa fa-envelope'></i>  info@AlmondyInn.com</li> " +
+                        "<li><a href='index.html'><i class='fa fa-globe'></i> http://AlmondyInn.com</li></a> " +
+                        "</ul>" +
+                        "</div>" +
+                        "</div>");
+                infoWindow.open(map, marker);
+            });
+        })(marker);
+    }
+    LoadMap();
+</script>
 </body>
+
 </html>
