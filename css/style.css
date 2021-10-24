@@ -1149,7 +1149,7 @@ b, strong {
     left: 0%;
     padding: 0;
     bottom: 0%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(128, 0, 32, 0.2);
     display: flex !important;
 }
 
