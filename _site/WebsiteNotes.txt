@@ -1,0 +1,58 @@
+Code for upper part- Waiting for new pictures
+
+
+<!-- Hotel alpha end -->
+<!---
+<!-- About Institute bg start -->
+<h1 id="specialevents" ><span></span> </h1>
+<div class="about-institute-bg content-area-6">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="hotels-detail-slider simple-slider">
+                        <div id="carousel-custom" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-outer">
+                                <!-- Carousel inner -->
+                                <div class="carousel-inner">
+                                    <div class="item">
+                                        <img src="img//inside_03.jpg" class="img-responsive" alt="about-3">
+                                    </div>
+                                    <div class="item active left">
+                                         <img src="img//inside_02.jpg" class="img-responsive" alt="about-3">
+                                    </div>
+                                    <div class="item next left">
+                                         <img src="img//inside_01.jpg" class="img-responsive" alt="about-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="about-text">
+                        <!-- title -->
+                        <div class="main-title-2">
+                            <h1  >Welcome to our Bed & Breakfast</h1>
+                        </div>
+                        <!-- paragraph -->
+                        <p>Our Newport Rhode Island Bed and Breakfast is conveniently located in downtown Newport RI, 
+                    just steps from Bannister’s and Bowens Wharfs on Narragansett Bay. This elegant 1890’s Victorian 
+                    has been restored to its original glory and is located within walking distance of Newport’s many 
+                    fine restaurants, antique shops, art galleries, boutiques, and near the various famous Newport Mansions 
+                    and island beaches.
+                    The Almondy Inn features six elegant guestrooms and suites that are uniquely decorated with fine period antiques, 
+                    private En-suite bathrooms – most with Jacuzzi baths,bedside gas fireplace and some with bay views. Spacious suites 
+                    at our Newport Rhode Island Inn offer a separate living or dressing room for additional comfort and a true feeling of spacious luxury.</p>
+                        <!-- ul -->
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Institute bg end -->
+--->
+
